@@ -4,8 +4,8 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 options = Options()
 print('asdf')
-print(sys.argv[0])
 print(sys.argv[1])
+print(sys.argv[2])
 options.headless = True
 driver = webdriver.Firefox(options=options)
 driver.get("sys.argv[0]")
