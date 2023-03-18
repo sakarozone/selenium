@@ -3,10 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 options = Options()
+path=sys.argv[1]
+id=sys.argv[2]
 options.headless = True
 driver = webdriver.Firefox(options=options)
-driver.get("sys.argv[1]")
-element = driver.find_element(By.ID, "sys.argv[2]")
+driver.get(path)
+element = driver.find_element(By.ID, id)
 assert element.is_displayed()
 if element.is_displayed():
     print("The button was found!")
