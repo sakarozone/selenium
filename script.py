@@ -2,6 +2,7 @@ import sys
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 options = Options()
 path=sys.argv[1]
 id=sys.argv[2]
@@ -13,6 +14,6 @@ assert element.is_displayed()
 try:
     if element.is_displayed():
         print("The element was found!")
-except:
+except NoSuchElementException:
     print("The element was not found!")
 driver.quit()
