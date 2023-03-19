@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 options = Options()
 path=sys.argv[1]
 id=sys.argv[2]
-options.add_argument("--headless=new")
+options.headless = True
 driver = webdriver.Firefox(options=options)
 driver.get(path)
 element = driver.find_element(By.ID, id)
