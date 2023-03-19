@@ -11,5 +11,7 @@ driver.get(path)
 element = driver.find_element(By.ID, id)
 assert element.is_displayed()
 if element.is_displayed():
-    print("The button was found!")
+    print("The element was found!")
+else :
+    print("The element was not found!")
 driver.quit()
