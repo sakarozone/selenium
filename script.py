@@ -10,7 +10,8 @@ options.headless = True
 driver = webdriver.Firefox(options=options)
 driver.get(path)
 length=len(arr)
-for i in range(1,length+1):
+print('lengthis',length)
+for i in range(1,length):
     try:
         element = driver.find_element(By.ID, arr[i])
         assert element.is_displayed()
@@ -18,5 +19,5 @@ for i in range(1,length+1):
             print("The element ",arr[i], " was found!")
     except NoSuchElementException:
         print("The element ",arr[i]," was not found!")
-        
+
 driver.quit()
