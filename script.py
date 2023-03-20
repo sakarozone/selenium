@@ -7,14 +7,12 @@ options = Options()
 str = sys.argv[1]
 str.replace('[\'', '')
 str.replace('\']', '')
-print(str)
 arr= str.split(" ")
 path=arr[0]
 options.headless = True
 driver = webdriver.Firefox(options=options)
 driver.get(path)
 length=len(arr)
-print('lengthis',length)
 for i in range(1,length):
     try:
         element = driver.find_element(By.ID, arr[i])
