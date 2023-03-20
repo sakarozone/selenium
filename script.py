@@ -4,9 +4,13 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 options = Options()
-arr = sys.argv[1].split(',')
-path=arr[0]
+arr = sys.argv[1]
+print(type(arr))
+arr.replace('[\'', '')
+arr.replace('\']', '')
+# path=arr[0]
 print(arr)
+
 # options.headless = True
 # driver = webdriver.Firefox(options=options)
 # driver.get(path)
