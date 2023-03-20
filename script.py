@@ -20,8 +20,8 @@ for i in range(1,length):
         element = driver.find_element(By.ID, arr[i])
         assert element.is_displayed()
         if element.is_displayed():
-            print("The element ",arr[i], " was found!")
+            print("The element",arr[i], "was found!")
     except NoSuchElementException:
-        print("The element ",arr[i]," was not found!")
+        print("The element",arr[i],"was not found!")
 
 driver.quit()
