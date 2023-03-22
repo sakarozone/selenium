@@ -10,7 +10,7 @@ driver = webdriver.Firefox(options=options)
 driver.get("http://www.seleniumframework.com/Practiceform/")
 driver.find_element(By.ID, "alert").click()
 try:
-    WebDriverWait(driver, 3).until(EC.alert_is_present(),
+    WebDriverWait(driver, 0).until(EC.alert_is_present(),
                                    'Timed out waiting for PA creation ' +
                                    'confirmation popup to appear.')
 
