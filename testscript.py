@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 options = Options()
 options.headless = True
 driver = webdriver.Firefox(options=options)
 driver.get("http://www.seleniumframework.com/Practiceform/")
-driver.find_element_by_id("alert").click()
+driver.find_element(By.ID, "alert").click()
 try:
     WebDriverWait(driver, 3).until(EC.alert_is_present(),
                                    'Timed out waiting for PA creation ' +
